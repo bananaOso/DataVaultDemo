@@ -5,6 +5,7 @@ operation:
   config:
     postSQL: ""
     preSQL: ""
+    testsEnabled: false
   database: ""
   deployEnabled: true
   description: Customer data as defined by TPC-H
@@ -75,7 +76,6 @@ operation:
               - columnCounter: 3eed9b39-1588-4a51-a1fb-7f560ac416f4
                 stepCounter: 66d3852e-76f1-4208-9900-a9f9d3f34b49
             transform: ""
-    cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases: {}
