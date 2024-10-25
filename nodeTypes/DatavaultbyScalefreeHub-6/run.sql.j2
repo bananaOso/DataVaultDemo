@@ -57,9 +57,9 @@ new_records AS (
   WHERE NOT EXISTS 
 
   (SELECT 1 
-  FROM {{ ref_no_link(node.location.name, node.name) }} "TGT"
+  FROM {{ ref_no_link(node.location.name, node.name) }} "DWH"
   WHERE 
-    "SRC"."{{ hashkey_column }}" = "TGT"."{{ hashkey_column }}")    
+    "SRC"."{{ hashkey_column }}" = "DWH"."{{ hashkey_column }}")    
 
   QUALIFY ROW_NUMBER() OVER (PARTITION BY "{{ hashkey_column }}" ORDER BY "{{ datavault4coalesce.config.ldts_alias }}" ) = 1
 )
